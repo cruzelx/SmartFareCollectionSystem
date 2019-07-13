@@ -30,7 +30,7 @@ class _homePageState extends State<homePage> {
   
   Future<List<Transaction>> _getTransactions() async{
     var response = await http.post(
-      'http://192.168.0.101:3000/transactions',
+      'http://192.168.43.113:3000/transactions',
       headers:  {
               "Accept":"application/json",
               "Content-Type":"application/json"
@@ -84,7 +84,7 @@ class _homePageState extends State<homePage> {
               if(snapshot.data == null){
                 return Container(
                   child: Center(
-                    child: Text("Loading"),
+                    child: CircularProgressIndicator(),
                   ),
                 );
               }else{
@@ -146,7 +146,7 @@ class _homePageState extends State<homePage> {
                                   SizedBox(height: 3.0),
                                   Text('Remaining Amount: ${snapshot.data[index].remaining}',style: TextStyle(color: Colors.white)),
                                   SizedBox(height: 3.0),
-                                  Text('Remaining Amount: ${snapshot.data[index].fromTo}',style: TextStyle(color: Colors.white)),
+                                  Text('Route: ${snapshot.data[index].fromTo}',style: TextStyle(color: Colors.white)),
                                    SizedBox(height: 3.0),
                                    ],
                                  ),

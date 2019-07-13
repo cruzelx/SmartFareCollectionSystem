@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:smartfarecollectionsystem-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -14,36 +15,202 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MCU_Module:Arduino_UNO_R3 A?
+L MCU_Module:Arduino_UNO_R3 Arduino1
 U 1 1 5D211B2A
-P 3450 3300
-F 0 "A?" H 3450 4481 50  0000 C CNN
-F 1 "Arduino_UNO_R3" H 3450 4390 50  0000 C CNN
-F 2 "Module:Arduino_UNO_R3" H 3600 2250 50  0001 L CNN
-F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 3250 4350 50  0001 C CNN
-	1    3450 3300
+P 3550 3400
+F 0 "Arduino1" H 3550 4581 50  0000 C CNN
+F 1 "Arduino_UNO_R3" H 3550 4490 50  0000 C CNN
+F 2 "Module:Arduino_UNO_R3" H 3700 2350 50  0001 L CNN
+F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 3350 4450 50  0001 C CNN
+	1    3550 3400
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x14_Female J?
-U 1 1 5D21D71C
-P 1050 3300
-F 0 "J?" H 1078 3276 50  0000 L CNN
-F 1 "Conn_01x14_Female" H 1078 3185 50  0000 L CNN
-F 2 "" H 1050 3300 50  0001 C CNN
-F 3 "~" H 1050 3300 50  0001 C CNN
-	1    1050 3300
+L Connector:Conn_01x08_Female RFID1
+U 1 1 5D23BC41
+P 2000 3750
+F 0 "RFID1" H 2028 3726 50  0000 L CNN
+F 1 "RFID" H 2028 3635 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 2000 3750 50  0001 C CNN
+F 3 "~" H 2000 3750 50  0001 C CNN
+	1    2000 3750
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x14_Male J?
-U 1 1 5D22092A
-P 2400 3250
-F 0 "J?" H 2508 4031 50  0000 C CNN
-F 1 "Conn_01x14_Male" H 2508 3940 50  0000 C CNN
-F 2 "" H 2400 3250 50  0001 C CNN
-F 3 "~" H 2400 3250 50  0001 C CNN
-	1    2400 3250
+L Connector:Conn_01x04_Female HC-5
+U 1 1 5D23DD0F
+P 2100 2750
+F 0 "HC-5" H 2128 2726 50  0000 L CNN
+F 1 "Bluetooth" H 2128 2635 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2100 2750 50  0001 C CNN
+F 3 "~" H 2100 2750 50  0001 C CNN
+	1    2100 2750
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:Conn_01x08_Female Keypad1
+U 1 1 5D23F66E
+P 5150 4550
+F 0 "Keypad1" H 5178 4526 50  0000 L CNN
+F 1 "Keypad" H 5178 4435 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 5150 4550 50  0001 C CNN
+F 3 "~" H 5150 4550 50  0001 C CNN
+	1    5150 4550
+	1    0    0    -1  
+$EndComp
+Text GLabel 4050 3400 2    50   Input ~ 0
+lcdd7A0
+Text GLabel 7200 4100 0    50   Input ~ 0
+lcdd62
+Text GLabel 3050 3000 0    50   Input ~ 0
+lcdd62
+Text GLabel 7200 4000 0    50   Input ~ 0
+lcdd53
+Text GLabel 3050 3100 0    50   Input ~ 0
+lcdd53
+Text GLabel 7200 3900 0    50   Input ~ 0
+lcdd44
+Text GLabel 3050 3200 0    50   Input ~ 0
+lcdd44
+Text GLabel 7200 3400 0    50   Input ~ 0
+lcden5
+Text GLabel 3050 3300 0    50   Input ~ 0
+lcden5
+Text GLabel 7200 4200 0    50   Input ~ 0
+lcdd7A0
+$Comp
+L Device:R_POT_TRIM POT10K1
+U 1 1 5D25548C
+P 4750 2350
+F 0 "POT10K1" H 4680 2396 50  0000 R CNN
+F 1 "R_POT_TRIM" H 4680 2305 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Piher_PT-10-V05_Vertical" H 4750 2350 50  0001 C CNN
+F 3 "~" H 4750 2350 50  0001 C CNN
+	1    4750 2350
+	1    0    0    -1  
+$EndComp
+Text GLabel 7200 3200 0    50   Input ~ 0
+lcdrs6
+Text GLabel 3050 3400 0    50   Input ~ 0
+lcdrs6
+Text GLabel 3750 2400 1    50   Input ~ 0
+5V
+$Comp
+L Device:R 470R1
+U 1 1 5D2568DF
+P 5300 2350
+F 0 "470R1" H 5370 2396 50  0000 L CNN
+F 1 "R" H 5370 2305 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5230 2350 50  0001 C CNN
+F 3 "~" H 5300 2350 50  0001 C CNN
+	1    5300 2350
+	1    0    0    -1  
+$EndComp
+Text GLabel 5300 2500 3    50   Input ~ 0
+5V
+Text GLabel 5300 2200 1    50   Input ~ 0
+leda
+Text GLabel 7200 4300 0    50   Input ~ 0
+leda
+Text GLabel 7200 4400 0    50   Input ~ 0
+GND
+Text GLabel 3650 4500 3    50   Input ~ 0
+GND
+Text GLabel 7200 3300 0    50   Input ~ 0
+GND
+Text GLabel 7200 3000 0    50   Input ~ 0
+5V
+Text GLabel 7200 3100 0    50   Input ~ 0
+pottolcd
+Text GLabel 4900 2350 2    50   Input ~ 0
+pottolcd
+Text GLabel 1800 3450 0    50   Input ~ 0
+rfid3.3v
+Text GLabel 3650 2400 1    50   Input ~ 0
+rfid3.3v
+Text GLabel 1800 3550 0    50   Input ~ 0
+rfidrst9
+Text GLabel 3050 3700 0    50   Input ~ 0
+rfidrst9
+Text GLabel 1800 3650 0    50   Input ~ 0
+GND
+NoConn ~ 1800 3750
+Text GLabel 1800 3850 0    50   Input ~ 0
+rfidmiso12
+Text GLabel 3050 4000 0    50   Input ~ 0
+rfidmiso12
+Text GLabel 3050 3900 0    50   Input ~ 0
+rfidmosi11
+Text GLabel 1800 3950 0    50   Input ~ 0
+rfidmosi11
+Text GLabel 1800 4050 0    50   Input ~ 0
+rfidsck13
+Text GLabel 3050 4100 0    50   Input ~ 0
+rfidsck13
+Text GLabel 1800 4150 0    50   Input ~ 0
+rfidss10
+Text GLabel 3050 3800 0    50   Input ~ 0
+rfidss10
+Text GLabel 1900 2650 0    50   Input ~ 0
+5V
+Text GLabel 1900 2750 0    50   Input ~ 0
+GND
+Text GLabel 1900 2850 0    50   Input ~ 0
+Btxd-Arxd8
+Text GLabel 1900 2950 0    50   Input ~ 0
+Brxd-Atxd7
+Text GLabel 3050 3600 0    50   Input ~ 0
+Btxd-Arxd8
+Text GLabel 3050 3500 0    50   Input ~ 0
+Brxd-Atxd7
+NoConn ~ 3450 2400
+NoConn ~ 3050 2800
+NoConn ~ 3050 2900
+NoConn ~ 4050 2800
+NoConn ~ 4050 3000
+NoConn ~ 4050 3200
+Text GLabel 4950 4250 0    50   Input ~ 0
+kpad1A5
+Text GLabel 4050 3900 2    50   Input ~ 0
+kpad1A5
+Text GLabel 4950 4350 0    50   Input ~ 0
+kpad2A4
+Text GLabel 4050 3800 2    50   Input ~ 0
+kpad2A4
+Text GLabel 4950 4450 0    50   Input ~ 0
+kpad3A3
+Text GLabel 4050 3700 2    50   Input ~ 0
+kpad3A3
+Text GLabel 4950 4550 0    50   Input ~ 0
+kpad4A2
+Text GLabel 4050 3600 2    50   Input ~ 0
+kpad4A2
+Text GLabel 4950 4950 0    50   Input ~ 0
+kpad8A1
+Text GLabel 4050 3500 2    50   Input ~ 0
+kpad8A1
+NoConn ~ 4950 4650
+NoConn ~ 4950 4750
+NoConn ~ 4950 4850
+NoConn ~ 4050 4100
+NoConn ~ 4050 4200
+NoConn ~ 3450 4500
+NoConn ~ 3550 4500
+Text GLabel 4750 2200 1    50   Input ~ 0
+5V
+Text GLabel 4750 2500 3    50   Input ~ 0
+GND
+$Comp
+L Connector_Generic:Conn_01x16 J1
+U 1 1 5D288912
+P 7400 3600
+F 0 "J1" H 7480 3592 50  0000 L CNN
+F 1 "Conn_01x16" H 7480 3501 50  0000 L CNN
+F 2 "Display:WC1602A" H 7400 3600 50  0001 C CNN
+F 3 "~" H 7400 3600 50  0001 C CNN
+	1    7400 3600
+	1    0    0    -1  
+$EndComp
+Text GLabel 7200 2900 0    50   Input ~ 0
+GND
 $EndSCHEMATC

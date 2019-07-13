@@ -10,6 +10,7 @@ var listum = [];
 var receivedData = [];
 var receivedDataArray = [];
 var urlencoded = bodyParser.urlencoded({ extended: true });
+
 device.listPairedDevices(console.log);
 //--------------Schemas------------------------------
 

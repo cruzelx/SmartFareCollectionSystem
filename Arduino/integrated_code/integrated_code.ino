@@ -19,7 +19,7 @@ char hexaKeys[ROWS][COLS] = {
 };
 byte rowPins[ROWS] = {A1}; //connect to the row pinouts of the keypad
 byte colPins[COLS] = {A5, A4, A3, A2}; //connect to the column pinouts of the keypad
-
++
 //initialize an instance of class NewKeypad
 Keypad keypad = Keypad( makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS); 
 
